@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>브릿지 커피 홍보물 만들기</title>
+  <link rel="icon" href="자료/로고.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>브릿지 커피 홍보물 만들기</h1>
+    <p>사진을 넣으면 인스타그램용으로 바꾸고, 홍보 문구도 한 번에 보여 드려요.</p>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="s1">
+      <h2 id="s1"><span class="num">1</span> 사진 넣기</h2>
+      <label class="drop" id="drop">
+        <input type="file" id="files" accept="image/jpeg,image/png" multiple hidden>
+        <strong>여기를 눌러서 사진을 고르세요</strong>
+        <span>사진을 끌어다 놓아도 됩니다 (jpg, png)</span>
+      </label>
+      <p class="note">사진은 인터넷에 올라가지 않고, 이 화면 안에서만 바뀝니다.</p>
+    </section>
+
+    <section class="card" id="resultCard" hidden aria-labelledby="s2">
+      <h2 id="s2"><span class="num">2</span> 완성된 사진</h2>
+      <p class="note" id="logoNote" hidden>로고 파일을 불러오지 못해서 로고 없이 만들었어요.</p>
+      <div class="actions">
+        <button type="button" class="primary" id="zipAll">전체 한 번에 받기</button>
+        <button type="button" id="clear">처음부터 다시</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="card" aria-labelledby="s3">
+      <h2 id="s3"><span class="num">3</span> 홍보 문구</h2>
+      <p class="note">글을 눌러서 직접 고칠 수 있어요. 고친 내용은 저장되지 않으니 복사해서 쓰세요.</p>
+      <div id="copyArea"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>브릿지 커피 · 광주 북구 비엔날레 지구</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="captions.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
